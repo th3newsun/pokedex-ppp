@@ -1,4 +1,4 @@
-import { IconSearch } from "@tabler/icons-react";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -26,7 +26,7 @@ const Pokemons = () => { // cria um componente Pokemons
                     type="button" 
                     className="bg-red-500 p-2 rounded-xl shadow-lg shadow-red-500/50 hover:bg-red-400 transition-colors"> {/* cria um botão com fundo vermelho, padding, bordas arredondadas, sombra e transição de cores */}
                     
-                    <IconSearch color="white" stroke={3} /> {/* adiciona um ícone de pesquisa branco */}
+                    <i className="bi bi-search text-white px-1" ></i> {/* cria um ícone de busca */}
                     </button>
                 </div>
             </form>
