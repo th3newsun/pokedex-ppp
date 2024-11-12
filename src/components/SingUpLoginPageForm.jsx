@@ -1,21 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const SingUpForm = () => {
+const SingUpLoginPageForm = () => {
 
   return (
-    <section className='flex flex-col items-center justify-start mt-11'>
-        <div>
-            <h1 className='font-bold font-outfit text-[35px] mb-10 mt-5'>Novo por aqui?</h1>
-            <hr className="border-t-[2px] border-black w-56 mx-auto mb-8"></hr>
-        </div>
-        <div className="flex justify-center">
-          <Link to='/SingUp'>
-              <button type="submit" className="bg-blue-600 hover:bg-blue-500 text-white text-lg font-bold font-outfit py-3 px-14 rounded focus:outline-none focus:shadow-outline">Criar conta</button>
+    <section className="">
+        <form className="p-5 rounded-2xl flex flex-col items-center h-full">
+            <h1 className='font-bold font-outfit mt-3 text-[1.82vw]'>Novo por aqui?</h1>
+            <hr className="border-t-[2px] border-black w-full mt-8 mb-8"></hr>
+
+          <Link to='/SingUp' className="w-full flex justify-center">
+              <button type="submit" className="bg-blue-600 hover:bg-blue-500 text-white text-[1vw] font-bold font-outfit py-3 px-14 rounded focus:outline-none focus:shadow-outline">Criar conta</button>
           </Link>
-        </div>
+        </form>
     </section>
   )
 }
 
-export default SingUpForm
+export default SingUpLoginPageForm
