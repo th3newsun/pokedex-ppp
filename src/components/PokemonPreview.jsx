@@ -13,19 +13,19 @@ const PokemonPreview = ({pokemonURL}) => {
     }, [])
 
     return (
-    <article className='text-center bg-white rounded-[30px] relative font-semibold capitalize pb-4 shadow-lg shadow-slate-400/20 border-2 border-transparent hover:border-slate-300 cursor-pointer group grid gap-2'>
-        <header className='h-9'>
+    <article className='text-center bg-white rounded-[15px] relative font-semibold capitalize pb-4 shadow-lg shadow-slate-400/20 border-2 border-transparent hover:border-slate-300 cursor-pointer group grid gap-2'>
+        <header className='h-24'>
             <img 
-            className='absolute left-1/2 -translate-x-1/2 top-0 -translate-y-1/2 group-hover:scale-110 transition-transform' 
+            className='absolute left-1/2 -translate-x-1/2 top-[70px] -translate-y-1/2 group-hover:scale-110 transition-transform h-32' 
             src={pokemon?.sprites.versions["generation-v"]["black-white"].front_default} 
             alt="" />
         </header >
-        <span className='text-sm text-slate-400'>N° {pokemon?.id}</span>
-        <h4 className='text-lg'>{pokemon?.name}</h4>
-        <ul className='flex gap-2 justify-center'>
+        <span className='text-sm font-outfit text-slate-400 mt-7'>N° {pokemon?.id}</span>
+        <h4 className='text-xl font-outfit mb-1'>{pokemon?.name}</h4>
+        <ul className='flex font-outfit gap-3 justify-center'>
             {pokemon?.types.map(type => (
             <li 
-            className={`p-1 rounded-md px-2 text-white text-sm ${colorByType[type.type.name]}`} 
+            className={`p-2 rounded-md px-3 text-white text-sm ${colorByType[type.type.name]}`} 
             key={type.type.name}
             >
                 {type.type.name}

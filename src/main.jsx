@@ -6,6 +6,7 @@ import App from './App.jsx';
 import HomePage from './routes/HomePage.jsx';
 import LoginPage from './routes/LoginPage.jsx';
 import SingUpPage from './routes/SingUpPage.jsx';
+import PerfilPage from './routes/PerfilPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
         path: 'SingUp',
         element: <SingUpPage />,
       },
+      {
+        path: 'Home/Perfil',
+        element: <PerfilPage />,
+      }
     ],
   },
 ]);
