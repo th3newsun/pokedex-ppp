@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 function App() {
   return (
     <section>
-      <main> 
+      <main>
         <Outlet />
       </main>
     </section>

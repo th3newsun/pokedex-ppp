@@ -5,15 +5,15 @@ import FemalePerfil from '../assets/FemalePerfil.png';
 
 const PerfilPage = () => {
     return (
-        <section className="bg-cover bg-fixed bgattachment-fixed bg-center min-h-screen w-screen " 
-            style={{ 
+        <section className="bg-cover bg-fixed bgattachment-fixed bg-center min-h-screen w-screen "
+            style={{
                 backgroundImage: `url(${backgroundImage})`,
             }}
-            >
+        >
             <div className='flex justify-center items-center'>
                 <div className='w-[98vw] h-[95vh] border-4 mt-4 border-red-500 rounded-xl flex gap-2'>
                     <div className='w-[24vw] h-[88vh] p-4 mt-5 mb-5 ml-5 border-4 border-red-500 rounded-xl bg-gray-400 bg-opacity-60'
-                        style={{ 
+                        style={{
                             backgroundImage: `url(${MalePerfil})`,
                             backgroundSize: '60%',
                             backgroundPosition: 'center 75%',

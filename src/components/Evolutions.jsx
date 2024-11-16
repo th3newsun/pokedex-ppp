@@ -1,6 +1,31 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react'
+import { usePokemonContext } from "../hooks/usePokemonContext";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { colorByType } from "../constants/pokemon";
+
+const Evolutions = ({ evolutions }) => {
+  const { showPokemon } = usePokemonContext();
+
+  return (
+    <div className="flex justify-center items-center gap-2 flex-wrap">
+      {evolutions.map((evolution, index) => (
+        <article key={evolution.name} className="flex gap-2 items-center">
+          {index !== 0 && (
+            <div className="bg-slate-100 p-2 rounded-full text-sm font-bold font-outfit">
+              <span>Lv. {evolution.min_level}</span>
+            </div>
+          )}
+          <button
+            onClick={() => showPokemon(evolution.pokemonInfo)}
+            className="hover:bg-slate-100 transition-colors rounded-3xl"
+          >
+            <img src={evolution.image} alt="" />
+          </button>
+        </article>
+      ))}
+    </div>
+  );
+};
 
 const PokemonPreview = ({ pokemonURL, onClick }) => {
   const [pokemon, setPokemon] = useState(null);
@@ -10,7 +35,7 @@ const PokemonPreview = ({ pokemonURL, onClick }) => {
       .get(pokemonURL)
       .then(({ data }) => setPokemon(data))
       .catch((err) => console.log(err));
-  }, []);
+  }, [pokemonURL]);
 
   return (
     <article onClick={() => onClick(pokemon)} className='text-center bg-white rounded-[15px] relative font-semibold capitalize pb-4 shadow-lg shadow-slate-400/20 border-2 border-transparent hover:border-slate-300 cursor-pointer group grid gap-2'>
@@ -30,4 +55,5 @@ const PokemonPreview = ({ pokemonURL, onClick }) => {
   );
 };
 
-export default PokemonPreview
+export default Evolutions;
+export { PokemonPreview };

@@ -23,7 +23,8 @@ const Pokemons = () => {
     const handleChangePokemonName = (e) => setPokemonName(e.target.value.toLowerCase())
 
     useEffect(() => {
-        if(isVisible){
+        const maxPokemons = pokemonByName.length
+        if(isVisible && maxPokemons != 0) {
             const maxPokemons = pokemonByName.length
             const newLimit = limit + increase_limit
             newLimit > maxPokemons ? setlimit(maxPokemons) : setlimit(newLimit);            

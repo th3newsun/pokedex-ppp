@@ -6,8 +6,8 @@ import fotoGengar from '../assets/fotoGengar.png'
 
 const SingUpPage = () => {
     return (
-        <section 
-            className="bg-cover bg-fixed bg-center h-screen w-screen overflow-hidden" 
+        <section
+            className="bg-cover bg-fixed bg-center h-screen w-screen overflow-hidden"
             style={{ backgroundImage: `url(${backgroundImage})` }}>
             <div className='grid grid-cols-3 items-center h-screen'>
                 <div className='col-start-1 '>

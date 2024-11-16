@@ -8,8 +8,8 @@ import { useEffect } from 'react';
 
 const Login = () => {
     return (
-        <section 
-            className="bg-cover bg-fixed bg-center h-screen w-screen overflow-hidden" 
+        <section
+            className="bg-cover bg-fixed bg-center h-screen w-screen overflow-hidden"
             style={{ backgroundImage: `url(${backgroundImage})` }}
         >
             <div className='grid grid-cols-2 h-full'>
@@ -19,8 +19,8 @@ const Login = () => {
                     </div>
                     <div className='bg-white rounded-3xl p-[20px] 
                    mt-16 gap-1 grid grid-cols-2 shadow-lg'>
-                            <LoginForm />
-                            <SingUpLoginPageForm />
+                        <LoginForm />
+                        <SingUpLoginPageForm />
                     </div>
                 </div>
                 <div className='flex items-center justify-center'>

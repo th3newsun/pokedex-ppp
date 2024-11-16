@@ -1,18 +1,16 @@
 import Pokemons from "../components/Pokemons";
-import Aside from "../components/Aside";
 import backgroundImage from '../assets/background.png';
 import ModalPokemon from "../components/ModalPokemon";
+import { usePokemonContext } from "../hooks/usePokemonContext";
 
 const Home = () => {
+    const { showDetailPokemon, closePokemonDetail, pokemonDetail } = usePokemonContext();
     return (
-        <section className="bg-cover bg-fixed bgattachment-fixed bg-center min-h-screen w-screen" 
-            style={{ 
-                backgroundImage: `url(${backgroundImage})`,
-            }}>
-            <main className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_350px]">
+        <section className="bg-cover bg-fixed bgattachment-fixed bg-center min-h-screen w-screen overflow-x-hidden overflow-y-auto" 
+        style={{ backgroundImage: `url(${backgroundImage})` }}>
+            <main className="max-w-[1400px] mx-auto">
                 <Pokemons />
-                <Aside />
-                
+                <ModalPokemon showModal={showDetailPokemon} onCloseModal={closePokemonDetail} pokemon={pokemonDetail} />
             </main>
         </section>
     );
