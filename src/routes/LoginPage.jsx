@@ -4,7 +4,6 @@ import backgroundImage from '../assets/background.png';
 import pokemonImage from '../assets/pokemonsLogin.png';
 import pokebookLogo from '../assets/pokebookLogo.png';
 import SingUpLoginPageForm from '../components/SingUpLoginPageForm';
-import { useEffect } from 'react';
 
 const Login = () => {
     return (

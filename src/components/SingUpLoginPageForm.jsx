@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const SingUpLoginPageForm = () => {
 
   return (
-    <section className="">
+    <section>
         <form className="p-5 rounded-2xl flex flex-col items-center h-full">
             <h1 className='font-bold font-outfit mt-3 text-[1.82vw]'>Novo por aqui?</h1>
             <hr className="border-t-[2px] border-black w-full mt-8 mb-8"></hr>
