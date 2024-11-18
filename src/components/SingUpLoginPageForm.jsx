@@ -18,3 +18,4 @@ const SingUpLoginPageForm = () => {
 }
 
 export default SingUpLoginPageForm
+ 
